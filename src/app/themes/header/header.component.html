@@ -1,0 +1,27 @@
+<nav class="header-navbar navbar-expand-md navbar navbar-with-menu navbar-without-dd-arrow fixed-top navbar-semi-dark navbar-shadow">
+   <div class="navbar-wrapper">
+      <div class="navbar-header">
+          <ul class="navbar-nav flex-row">
+              <li class="mobile-menu d-md-none mr-auto">
+                <a class="menu-toggle hidden-xs"><i class="la la-bars" (click)="toggleSideBar()" style="cursor: pointer;"></i></a>
+              </li>
+              <li>
+                <a><img  src="../../../assets/images/lekha-ink-logo.png" width="180px" height="45px">
+                </a>
+              </li>
+              <li class="d-md-none">
+                <a class="open-navbar-container" data-toggle="collapse" aria-expanded="false"><i class="la la-ellipsis-v" (click)="toggle()" style="cursor: pointer;"></i></a>
+              </li>
+          </ul>
+      </div>
+      <div class="navbar-container content">
+        <div class="collapse navbar-collapse" [ngClass]="{'show':navbarOpen}">
+            <div class="topnavbar">
+                <div class="header-rightmenu">
+
+                </div>
+            </div>
+        </div>
+      </div>
+   </div>
+</nav>
