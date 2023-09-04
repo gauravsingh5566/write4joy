@@ -18,7 +18,7 @@ jobs:
         with:
           host: ${{ secrets.HOST }}
           username: ${{ secrets.HOST_USERNAME }}
-          key: ${{ secrets.PRIVATE_PASS }}
+          password: ${{ secrets.PRIVATE_PASS }}
           script: |  
               cd /home/ubuntu
               sudo  git clone https://github.com/devarya/write4joy.git master
