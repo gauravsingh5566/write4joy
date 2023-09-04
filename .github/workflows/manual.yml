@@ -1,0 +1,25 @@
+name: automation_deployment
+
+on:
+  pull_request:
+    types:
+      - closed
+    branches:
+      - master
+
+
+jobs:
+  access_server:
+    name: Access server
+    runs-on: ubuntu-latest
+    steps:
+      - name: Create a dir
+        uses: appleboy/ssh-action@master
+        with:
+          host: ${{ secrets.HOST }}
+          username: ${{ secrets.HOST_USERNAME }}
+          key: ${{ secrets.PRIVATE_PASS }}
+          script: |  
+              cd /var/www/html/flexforce_yii2
+              sudo  git pull https://github.com/devarya/write4joy.git master
+              
